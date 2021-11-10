@@ -14,7 +14,7 @@
         
     This method is a helper method that is called once from
     main. This method reads line-by-line of process information
-    fromn a given text file and stores pertinent information into
+    from a given text file and stores pertinent information into
     2 separate unordered maps. This method loads data into pidPpid
     Map to store pid to ppid association for easy look-up later
     on. This method also loads data into pidCmd Map to store pid
