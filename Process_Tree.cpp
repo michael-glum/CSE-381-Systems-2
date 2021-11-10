@@ -92,10 +92,6 @@ ProcTree::printProcessTree(const int pid, bool printHeader) const {
  *  \param[in] *argv[] A list of char pointers to the command line
  *  arguments
 */
-
-/** --------------  DOCUMENT THE MAIN METHOD!!! ------------------- */
-/** This documentation should be similar to how other methods are documented
-    in the header file */
 int main(int argc, char *argv[]) {
     if (argc < 2) {
         std::cerr << "Specify ProcessListFile and PIDs\n";
