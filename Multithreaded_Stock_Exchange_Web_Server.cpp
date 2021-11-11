@@ -94,7 +94,7 @@ std::string create(std::string stock, unsigned int amount) {
 /**
  * This method is called from clientThread to process a "buy" transaction.
  * It reduces the balance associated with the stock and returns a message with
- * the new balance or a message saying that the stock could not be found.
+ * the new balance, or a message saying that the stock could not be found.
  *
  * \param[in] stock The stock to be processed
  *
