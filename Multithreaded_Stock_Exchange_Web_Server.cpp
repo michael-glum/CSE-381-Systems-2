@@ -259,7 +259,7 @@ void clientThread(std::istream& is, std::ostream& os) {
     // Read the important elements of the request into the desired variables
     std::istringstream(request) >> dummy >> trans >> dummy >> stock
         >> dummy >> amount;
-    // Request is considered an invalid by defualt
+    // Request is considered invalid by defualt
     msg = "Invalid request";
     // Process transaction if request is valid and retrieve the message
     if (trans == "reset") {
