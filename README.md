@@ -1,3 +1,3 @@
 # CSE-381-Systems-2
 
-This repository is simply used to store the homework assignments I've completed in my Systems 2 class at Miami University.
+This repository is used to store the homework assignments I've completed throughout the course, Systems 2, at Miami University.
