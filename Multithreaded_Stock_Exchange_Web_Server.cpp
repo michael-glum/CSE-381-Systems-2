@@ -4,7 +4,7 @@
  * A simple online stock exchange web-server.  
  * 
  * This multithreaded web-server performs simple stock trading
- * transSactions on stocks.  Stocks must be maintained in an
+ * transactions on stocks.  Stocks must be maintained in an
  * unordered_map.
  *
  */
