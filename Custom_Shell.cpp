@@ -2,7 +2,7 @@
 * Copyright 2021 Michael Glum
 * 
  * A custom shell that uses fork() and execvp() for running commands
- * in serially or in parallel.
+ * in serial or in parallel.
  * 
  */
 
