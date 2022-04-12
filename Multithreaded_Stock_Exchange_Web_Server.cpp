@@ -200,14 +200,13 @@ void HTTPResponse(std::ostream& os, const std::string& msg) {
 }
 
 /**
- * This method assumes the input stream is an HTTP GET request (hence it is
- * important to understand the input format before implementing this
- * method).  This method extracts the URL to be processed from the 1st
+ * This method assumes the input stream is an HTTP GET request
+ * and extracts the URL to be processed from the 1st
  * line of the input stream.
  *
  * For example, if the 1st line of input is
- * "GET /http://localhost:8080/~raodm HTTP/1.1" then this method returns
- * "http://localhost:8080/~raodm"
+ * "GET /http://localhost:8080/~user HTTP/1.1" then this method returns
+ * "http://localhost:8080/~user"
  *
  * @return This method returns the path specified in the GET
  * request.
@@ -216,8 +215,8 @@ std::string extractURL(std::istream& is) {
     std::string line, url;
     // Extract the GET request line from the input
     std::getline(is, line);
-    // Read and skip HTTP headers. Without reading & skipping HTTP
-    // headers, your program will not work correctly with
+    // Read and skip HTTP headers, allowing for the
+    // program to work correctly with
     // web-browsers.
     for (std::string hdr; std::getline(is, hdr)
         && !hdr.empty() && hdr != "\r";) {
@@ -284,12 +283,6 @@ void clientThread(std::istream& is, std::ostream& os) {
 /**
  * Top-level method to run a custom HTTP server to process stock trade
  * requests.
- *
- * Phase 1: Multithreading is not needed.
- *
- * Phase 2: This method must use multiple threads -- each request
- * should be processed using a separate detached thread. Optional
- * feature: Limit number of detached-threads to be <= maxThreads.
  *
  * \param[in] server The boost::tcp::acceptor object to be used to accept
  * connections from various clients.
